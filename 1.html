@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>XX 实验室 • Marine Hydrodynamics Lab Style</title>
+  <meta name="description" content="XX 实验室 — 研究海洋流体、AUV 与能量系统">
+
+  <!-- 简单样式（你也可以把它放到 css/style.css） -->
+  <style>
+    :root{
+      --accent:#0b6efd;
+      --bg:#ffffff;
+      --muted:#666;
+      --card:#fafafa;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;color:#222;background:var(--bg);line-height:1.6}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{height:42px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:#222;text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center;padding:40px 0}
+    .hero .intro h1{font-size:2rem;margin:0 0 10px}
+    .hero .intro p{color:var(--muted);margin:0 0 16px}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,10,10,0.03)}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    section{padding:40px 0;border-top:1px solid #f3f3f3}
+    h2{margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .people-card{display:flex;gap:12px;align-items:center}
+    .people-card img{width:84px;height:84px;border-radius:8px;object-fit:cover}
+    footer{padding:18px 0;color:var(--muted);border-top:1px solid #eee}
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .grid3{grid-template-columns:repeat(1,1fr)}
+      .grid2{grid-template-columns:repeat(1,1fr)}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo">
+      <div>
+        <div style="font-weight:700">XX 实验室</div>
+        <div style="font-size:13px;color:var(--muted)">Marine Hydrodynamics Lab</div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#facilities">Facilities</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- HERO -->
+  <section class="hero" aria-label="hero">
+    <div class="intro">
+      <h1>XX 实验室 — 海洋流体与水下系统研究</h1>
+      <p class="muted">我们专注于海浪能转换、深海 AUV 对接与海洋工程实验。结合数值模拟、物理试验与自主系统，实现海洋工程关键技术突破。</p>
+      <div class="cta">
+        <a class="btn" href="people.html">团队成员</a>
+        <a class="btn" style="background:#f3f3f3;color:#111" href="#research">研究方向</a>
+      </div>
+      <div style="margin-top:18px;color:var(--muted);font-size:14px">
+        最新新闻：<strong>2025-08-01 • 实验室获 NSF 项目资助</strong>
+      </div>
+    </div>
+    <div class="card" style="height:260px;background-image:url('assets/hero.jpg');background-size:cover;background-position:center;border-radius:12px"></div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>研究方向</h2>
+    <p class="muted">主要研究领域概览 — 每项都附带项目与代表性成果</p>
+
+    <div class="grid3" style="margin-top:16px">
+      <div class="card">
+        <h3>海浪能装置（WEC）</h3>
+        <p class="muted">设计与测试波浪能转换器（OSWEC / point-absorber），数值耦合仿真与水槽试验。</p>
+      </div>
+
+      <div class="card">
+        <h3>深海 AUV 对接</h3>
+        <p class="muted">研究 AUV 与海底基站的对接/充电技术，声学定位与视觉导航融合。</p>
+      </div>
+
+      <div class="card">
+        <h3>海洋流体-结构耦合</h3>
+        <p class="muted">考虑流体与柔性结构的耦合动力学与疲劳分析。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section id="facilities">
+    <h2>实验设施</h2>
+    <p class="muted">主要实验设备：波浪水槽、拖车平台、推力测试台等。</p>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="card">
+        <img src="assets/facility1.jpg" alt="" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px">
+        <h4>大型波浪水槽</h4>
+        <p class="muted">长 30m，支持可控波谱与风驱动试验。</p>
+      </div>
+
+      <div class="card">
+        <img src="assets/facility2.jpg" alt="" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:8px">
+        <h4>AUV 测试区</h4>
+        <p class="muted">集成动力系统与导航系统测试平台。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <h2>新闻与动态</h2>
+    <div style="margin-top:12px">
+      <article class="card" style="margin-bottom:12px">
+        <h4>2025-08-01 • 获 NSF 项目资助</h4>
+        <p class="muted">实验室中标 NSF 项目“Deep-sea AUV docking”，将开展为期三年的联合研究。</p>
+      </article>
+
+      <article class="card">
+        <h4>2025-06-12 • 学生论文在顶会被接收</h4>
+        <p class="muted">本科生李四的论文“Adaptive LBL scheduling”被 ICCE 接收。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>代表论文</h2>
+    <ol style="margin-top:12px">
+      <li class="muted">Zhao K., et al., "AUV docking system", Journal of Ocean Engineering, 2024.</li>
+      <li class="muted">Zhao K., et al., "Wave energy converter modeling", Renewable Energy, 2023.</li>
+    </ol>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>联系我们</h2>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:12px">
+      <div style="flex:1;min-width:240px">
+        <p class="muted"><strong>地址</strong><br>123 Engineering Rd, Stevens Institute</p>
+        <p class="muted"><strong>Email</strong><br>lab@stevens.edu</p>
+      </div>
+      <div style="flex:1;min-width:240px" class="card">
+        <form id="contactForm">
+          <label class="muted" style="font-weight:600">给我们留言</label><br>
+          <input name="name" placeholder="姓名" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #ddd">
+          <input name="email" placeholder="邮箱" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #ddd">
+          <textarea name="message" placeholder="内容" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid #ddd" rows="5"></textarea>
+          <button type="submit" class="btn" style="border:none">发送</button>
+          <div id="formStatus" style="margin-top:8px;color:var(--muted);font-size:13px"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+    <div>© XX 实验室 • Stevens Institute</div>
+    <div class="muted">备案/隐私信息（可按学校要求修改）</div>
+  </div>
+</footer>
+
+<!-- 简单脚本（替换为更完善的交互或后端） -->
+<script>
+  // contact 表单示例：这里只做前端验证；如果想让表单生效需要后端或第三方 form 服务（Formspree / Staticman / Netlify Forms）
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('formStatus').textContent = '谢谢！表单已提交（示例：此站点未连接后端）';
+  });
+</script>
+</body>
+</html>
