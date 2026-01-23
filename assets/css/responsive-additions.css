@@ -1,0 +1,278 @@
+/* ============================================
+   GLOBAL SIZE SCALING - 90% of original size
+   ============================================ */
+
+	/* Method 1: Scale the entire wrapper to 90% and center it */
+	#wrapper {
+		transform: translateX(-50%) scale(0.9);
+		transform-origin: center top;
+		width: 111.11%; /* 100% / 0.9 = 111.11% to compensate for scale */
+		margin-left: 50% !important;
+		margin-right: auto !important;
+		position: relative;
+	}
+
+	/* Ensure body centers content */
+	body {
+		overflow-x: hidden;
+		max-width: 100vw;
+		text-align: center;
+	}
+
+	body > * {
+		text-align: left;
+	}
+
+	/* Method 2: Also adjust root font size for rem/em units */
+	html {
+		font-size: 90%;
+	}
+
+/* ============================================
+   RESPONSIVE DESIGN FOR PROJECTS, NEWS, AND CONTACT
+   ============================================ */
+
+	/* Project Items - Responsive Layout */
+	.project-item {
+		display: flex;
+		margin-bottom: 3rem;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	@media screen and (max-width: 980px) {
+		.project-item {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 1.5rem;
+		}
+		
+		.project-item > div:first-child {
+			flex: 1 1 100% !important;
+			max-width: 100% !important;
+		}
+		
+		.project-item img {
+			width: 100% !important;
+			height: 250px !important;
+		}
+	}
+
+	@media screen and (max-width: 640px) {
+		.project-item {
+			margin-bottom: 2rem;
+			gap: 1rem;
+		}
+		
+		.project-item img {
+			height: 200px !important;
+		}
+		
+		.project-item h3 {
+			font-size: 1.1em !important;
+		}
+		
+		.project-item p {
+			font-size: 0.9em !important;
+		}
+	}
+
+	/* News Items - Responsive Layout */
+	.news-item {
+		display: flex;
+		margin-bottom: 3rem;
+		align-items: center;
+		gap: 2rem;
+		padding: 1.5rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+	}
+
+	@media screen and (max-width: 980px) {
+		.news-item {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 1.5rem;
+			padding: 1.25rem;
+		}
+		
+		.news-item > div:first-child {
+			flex: 1 1 100% !important;
+			max-width: 100% !important;
+		}
+		
+		.news-item img {
+			width: 100% !important;
+			height: 200px !important;
+		}
+	}
+
+	@media screen and (max-width: 640px) {
+		.news-item {
+			margin-bottom: 2rem;
+			padding: 1rem;
+			gap: 1rem;
+		}
+		
+		.news-item img {
+			height: 160px !important;
+		}
+		
+		.news-item h3 {
+			font-size: 1.1em !important;
+			margin-bottom: 0.5rem !important;
+		}
+		
+		.news-item p {
+			font-size: 0.9em !important;
+		}
+	}
+
+	/* Contact Information - Responsive Grid */
+	@media screen and (max-width: 980px) {
+		article[id="fiv"] > div:first-child {
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+			gap: 1.5rem !important;
+		}
+	}
+
+	@media screen and (max-width: 640px) {
+		article[id="fiv"] > div:first-child {
+			grid-template-columns: 1fr !important;
+			gap: 1.5rem !important;
+		}
+		
+		article[id="fiv"] > div:first-child > div {
+			padding: 1.5rem !important;
+		}
+	}
+
+	/* Social Media Links - Responsive */
+	@media screen and (max-width: 640px) {
+		article[id="fiv"] > div:nth-child(2) > div {
+			flex-direction: column !important;
+			gap: 1rem !important;
+		}
+		
+		article[id="fiv"] > div:nth-child(2) > div > a {
+			width: 100% !important;
+			justify-content: center !important;
+		}
+	}
+
+	/* Mentor Section - Responsive */
+	@media screen and (max-width: 640px) {
+		#thr .mentor img {
+			width: 180px;
+			height: 180px;
+		}
+		
+		#thr .mentor h3 {
+			font-size: 1.2em;
+		}
+		
+		#thr .mentor p {
+			font-size: 0.9em;
+			padding: 0 1rem;
+		}
+	}
+
+	/* Student Section - Additional Responsive Adjustments */
+	@media screen and (max-width: 480px) {
+		#thr .student img {
+			width: 120px;
+			height: 120px;
+		}
+		
+		#thr .student p {
+			font-size: 0.85em;
+		}
+		
+		#thr .student .student-research {
+			font-size: 0.8em;
+		}
+	}
+
+	/* Article Content - Responsive Padding */
+	@media screen and (max-width: 736px) {
+		#main article {
+			padding: 3rem 1.5rem 1.5rem 1.5rem !important;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		#main article {
+			padding: 2.5rem 1rem 1rem 1rem !important;
+		}
+	}
+
+	/* Header - Responsive Adjustments */
+	@media screen and (max-width: 640px) {
+		#header .content .inner h1 {
+			font-size: 2em;
+		}
+		
+		#header .content .inner p {
+			font-size: 0.9em;
+		}
+	}
+
+	/* Collaboration Section - Responsive */
+	@media screen and (max-width: 640px) {
+		article[id="fiv"] > div:last-child {
+			padding: 1.5rem !important;
+			margin-top: 2rem !important;
+		}
+		
+		article[id="fiv"] > div:last-child h3 {
+			font-size: 1.2em !important;
+		}
+		
+		article[id="fiv"] > div:last-child p {
+			font-size: 0.9em !important;
+		}
+	}
+
+	/* General Responsive Improvements */
+	@media screen and (max-width: 480px) {
+		h2.major {
+			font-size: 1.5em;
+		}
+		
+		h3 {
+			font-size: 1.2em;
+		}
+		
+		.button {
+			padding: 0.75rem 1.5rem;
+			font-size: 0.9em;
+		}
+	}
+
+	/* Landscape orientation for mobile devices */
+	@media screen and (max-width: 736px) and (orientation: landscape) {
+		#home-projects {
+			margin-top: 10vh;
+		}
+		
+		#wrapper {
+			padding: 2rem 1rem;
+		}
+	}
+
+	/* Very small screens */
+	@media screen and (max-width: 360px) {
+		#header .logo img {
+			width: 50px;
+			height: 50px;
+		}
+		
+		.home-project-card {
+			padding: 0.75rem;
+		}
+		
+		.project-item,
+		.news-item {
+			padding: 1rem;
+		}
+	}
